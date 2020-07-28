@@ -328,6 +328,9 @@ screen navigation():
             ## Помощь не необходима и не относится к мобильным устройствам.
             textbutton _("Помощь") action ShowMenu("help")
 
+        if main_menu:
+            textbutton _("Вики") action OpenURL("https://svb.fandom.com/ru/wiki/%D0%A1%D0%B0%D0%BD%D1%91%D0%BA_%D0%B2_%D0%B1%D0%B8%D0%B4%D0%B5_%D0%B2%D0%B8%D0%BA%D0%B8")
+
         if renpy.variant("pc"):
 
             ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
@@ -584,7 +587,7 @@ style about_label_text:
 ## как они почти одинаковые, оба реализованы по правилам третьего экрана —
 ## file_slots.
 ##
-## https://www.renpy.org/doc/html/screen_special.html#save 
+## https://www.renpy.org/doc/html/screen_special.html#save
 
 screen save():
 

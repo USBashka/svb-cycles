@@ -1,6 +1,7 @@
 
 # Логи Ren'Py
 log.txt
+traceback.txt
 
 # Скомпилированные скрипты
 *.rpyc
