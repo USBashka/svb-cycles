@@ -76,10 +76,25 @@ style frame:
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
 
+style book_text:
+    antialias False
+    color "#000000"
+    font "fonts/mc.ttf"
+
+
 
 ################################################################################
 ## Внутриигровые экраны
 ################################################################################
+
+## Книга #######################################################################
+
+screen book(book_text):
+    style_prefix "book"
+    $ book_bg = im.FactorScale(im.Crop("gui/book.png", (20, 1, 146, 180)), 5, bilinear=False)
+    add book_bg xalign 0.5 yalign 0.5
+    text "Page 1 of 1" xalign 0.6 yalign 0.2
+    text book_text xalign 0.5 yalign 0.5
 
 
 ## Экран разговора #############################################################

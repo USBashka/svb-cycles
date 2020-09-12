@@ -1,0 +1,17 @@
+{
+  "layout": null,
+  "package": "com.savaowo.svbcycles",
+  "include_pil": false,
+  "numeric_version": "1",
+  "expansion": false,
+  "name": "\u0421\u0430\u043d\u0451\u043a \u0432 \u0431\u0438\u0434\u0435 / \u0426\u0438\u043a\u043b\u044b",
+  "update_always": true,
+  "source": false,
+  "icon_name": "\u0421\u0430\u043d\u0451\u043a / \u0426\u0438\u043a\u043b\u044b",
+  "version": "0.0.1",
+  "update_icons": true,
+  "permissions": ["VIBRATE"],
+  "include_sqlite": false,
+  "store": "none",
+  "orientation": "sensor"
+}

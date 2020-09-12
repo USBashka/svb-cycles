@@ -5,6 +5,9 @@ define b = Character('Бох Чёрных Чирипов', color="#666666")
 define r = Character('Рустем', color="#AC3535")
 define l = Character('Лёха', color="#2A892A")
 
+# Музыка
+define audio.menu = "audio/menu.mp3"
+
 # Определение переменных
 define cycle_number = 0
 define pockets_checked = False  # Игрок проверил карманы?
@@ -34,6 +37,7 @@ label check_pockets:
     s "Но где же он? Может, его выкинуло этим ужасным штормом в глубь острова?"
 label inspect_sqiland:
     s "Надо осмотреться!"
+    call screen book('Ya tiba ishu')
     if not pockets_checked:
         s "У меня есть идея, я позову своего друга..."
 

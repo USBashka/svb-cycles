@@ -2,12 +2,14 @@
 # Логи Ren'Py
 log.txt
 traceback.txt
+errors.txt
 
 # Скомпилированные скрипты
 *.rpyc
 
 # Бинарники сохранений
 saves
+Notes
 
 # Кэш
 cache
