@@ -12,6 +12,12 @@ define audio.menu = "audio/menu.mp3"
 define cycle_number = 0
 define pockets_checked = False  # Игрок проверил карманы?
 
+
+# Сплэш перед игрой
+label splashscreen:
+    show text "SavaOwO" with dissolve
+    pause 1
+    return
 # Игра начинается здесь:
 label start:
 

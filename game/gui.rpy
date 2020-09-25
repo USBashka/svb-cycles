@@ -62,7 +62,7 @@ define gui.text_font = "DejaVuSans.ttf"
 define gui.name_text_font = "DejaVuSans.ttf"
 
 ## Шрифт, используемый текстом вне игры.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "fonts/mc.ttf"
 
 ## Размер нормального текста диалога.
 define gui.text_size = 33
@@ -86,7 +86,7 @@ define gui.title_text_size = 75
 ## Главное и игровое меню. #####################################################
 
 ## Изображения, используемые в главном и игровом меню.
-define gui.main_menu_background = "gui/main_menu.png"
+define gui.main_menu_background = Movie(play="videos/menu_sqiland.webm", loop=True, size=(1920, 1080))
 define gui.game_menu_background = "gui/game_menu.png"
 
 
@@ -474,6 +474,3 @@ init python:
 
         gui.nvl_button_width = 1860
         gui.nvl_button_xpos = 30
-
-
-
