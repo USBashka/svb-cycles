@@ -1,0 +1,97 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "MButton",
+"language": "GDScript",
+"path": "res://ui/elements/menu_button.gd"
+} ]
+_global_script_class_icons={
+"MButton": ""
+}
+
+[application]
+
+config/name="svb-cycles"
+config/description="Игра по легендарному сириалу \"Санёк в биде\""
+run/main_scene="res://ui/main_menu.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="SavaOwO/svb-cycles"
+boot_splash/image="res://assets/ui/splash.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://assets/ui/icon.png"
+config/windows_native_icon="res://assets/ui/icon.ico"
+
+[autoload]
+
+G="*res://G.gd"
+AudioManager="*res://managers/AudioManager.tscn"
+
+[display]
+
+window/size/width=640
+window/size/height=360
+window/size/test_width=1280
+window/size/test_height=720
+window/dpi/allow_hidpi=true
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[gui]
+
+theme/custom="res://res/themes/main_theme.tres"
+theme/custom_font="res://res/fonts/main_mc.tres"
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[input]
+
+toggle_fullscreen={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777247,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777254,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[locale]
+
+translations=PoolStringArray(  )
+
+[rendering]
+
+quality/2d/use_nvidia_rect_flicker_workaround=true
+quality/2d/use_pixel_snap=true
+batching/precision/uv_contract=true
+environment/default_clear_color=Color( 0.780392, 0.882353, 0.87451, 1 )
+quality/filters/msaa=1
+environment/default_environment="res://default_env.tres"

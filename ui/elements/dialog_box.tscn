@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/fonts/F77MinecraftRegular-0VYv.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://res/fonts/dialog_text.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/ui/dialog_box.png" type="Texture" id=3]
+[ext_resource path="res://res/styleboxes/dialog_bg.tres" type="StyleBox" id=4]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 3 )
+region_rect = Rect2( 21, 3, 16, 13 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+
+[sub_resource type="DynamicFont" id=2]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 3 )
+region_rect = Rect2( 40, 3, 16, 13 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+
+[node name="DialogBox" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0.183, 17.195 )
+custom_styles/panel = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharName" type="Panel" parent="Panel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -179.0
+margin_top = -6.0
+margin_right = -63.0
+margin_bottom = 7.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel/CharName"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
+text = "Бох Чёрных Чирипов"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lights" type="Panel" parent="Panel/CharName"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Phrase" type="RichTextLabel" parent="Panel"]
+modulate = Color( 0.196078, 0.160784, 0.160784, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = -24.0
+margin_bottom = -24.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "Ууу, я тебя убью и ты поплатишься за всё"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://res/fonts/title_small.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/ui/settings/window_mode.png" type="Texture" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 8.0
+bg_color = Color( 0.247059, 0.235294, 0.290196, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 16, 8, 8 )
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+text = "Настройки"
+align = 1
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 130.0
+margin_top = 79.0
+margin_right = -131.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+margin_right = 379.0
+margin_bottom = 40.0
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer"]
+margin_top = 4.0
+margin_right = 187.0
+margin_bottom = 12.0
+size_flags_horizontal = 3
+text = "Громкость"
+valign = 1
+
+[node name="HSlider" type="HSlider" parent="VBoxContainer/GridContainer"]
+margin_left = 191.0
+margin_right = 378.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/GridContainer"]
+margin_top = 19.0
+margin_right = 187.0
+margin_bottom = 39.33
+rect_min_size = Vector2( 0, 20.33 )
+text = "Режим отображения"
+valign = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/GridContainer"]
+margin_left = 191.0
+margin_top = 20.0
+margin_right = 378.0
+margin_bottom = 40.0
+custom_styles/normal = SubResource( 1 )
+text = "Оконный"
+icon = SubResource( 2 )
+items = [ "Оконный", SubResource( 2 ), false, 0, null, "Полноэкранный", SubResource( 3 ), false, 1, null, "Псевдополноэкранный", SubResource( 4 ), true, 2, null ]
+selected = 0

@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://ui/elements/menu_button.gd" type="Script" id=1]
+[ext_resource path="res://res/fonts/menu_element.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/ui/menu_icons.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 81, 1, 18, 15 )
+
+[node name="MenuButton" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 24 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBox" type="HBoxContainer" parent="."]
+margin_right = 137.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 0, 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Icon" type="TextureRect" parent="HBox"]
+modulate = Color( 0.898039, 0.956863, 0.372549, 1 )
+margin_right = 24.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture = SubResource( 1 )
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="HBox"]
+margin_left = 28.0
+margin_top = 1.0
+margin_right = 146.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 2 )
+text = "MenuElement"
+valign = 1
+
+[node name="Tween" type="Tween" parent="."]
+[connection signal="mouse_entered" from="." to="." method="_on_MenuButton_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_MenuButton_mouse_exited"]

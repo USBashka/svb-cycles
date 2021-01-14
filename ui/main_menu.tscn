@@ -1,0 +1,179 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://res/fonts/main_mc.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ui/elements/menu_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/ui/menu_icons.png" type="Texture" id=3]
+[ext_resource path="res://res/fonts/title.tres" type="DynamicFont" id=4]
+[ext_resource path="res://ui/main_menu.gd" type="Script" id=5]
+[ext_resource path="res://ui/splash_screen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/ui/menu_bg.webp" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 21, 21, 11, 17 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 38, 1, 15, 15 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 81, 1, 18, 15 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 105, 3, 18, 13 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 3 )
+region = Rect2( 63, 22, 14, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 59, 1, 15, 15 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 101, 22, 19, 15 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 81, 22, 15, 15 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBackground" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Статический фон, который виден на мобильных устройствах"
+}
+
+[node name="Background" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Видеофон, который включается только если устройство не мобильное"
+}
+
+[node name="Title" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 115.0
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.552941, 0.517647, 0.74902, 1 )
+text = "Санёк в биде / Циклы"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = -232.0
+margin_right = 226.0
+margin_bottom = -12.0
+grow_vertical = 0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" parent="Buttons" instance=ExtResource( 2 )]
+margin_right = 202.0
+margin_bottom = 24.0
+icon_texture = SubResource( 1 )
+label_text = "Играть"
+action = "play"
+
+[node name="NewGame" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 28.0
+margin_right = 202.0
+margin_bottom = 52.0
+icon_texture = SubResource( 2 )
+label_text = "Новая Игра"
+action = "new_game"
+
+[node name="Multiplayer" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 56.0
+margin_right = 202.0
+margin_bottom = 80.0
+icon_texture = SubResource( 3 )
+label_text = "Мультиплеер"
+action = "multiplayer"
+
+[node name="Consos" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 84.0
+margin_right = 202.0
+margin_bottom = 108.0
+icon_texture = SubResource( 4 )
+label_text = "Консось"
+action = "open_consos"
+
+[node name="Achievements" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 112.0
+margin_right = 202.0
+margin_bottom = 136.0
+icon_texture = SubResource( 5 )
+label_text = "Достижения"
+action = "achives"
+
+[node name="Settings" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 140.0
+margin_right = 202.0
+margin_bottom = 164.0
+icon_texture = SubResource( 6 )
+label_text = "Настройки"
+action = "settings"
+
+[node name="About" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 168.0
+margin_right = 202.0
+margin_bottom = 192.0
+icon_texture = SubResource( 7 )
+label_text = "Об игре"
+action = "about"
+
+[node name="Exit" parent="Buttons" instance=ExtResource( 2 )]
+margin_top = 196.0
+margin_right = 202.0
+margin_bottom = 220.0
+icon_texture = SubResource( 8 )
+label_text = "Выход"
+action = "exit"
+
+[node name="VersionLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -122.0
+margin_top = -28.0
+margin_right = -24.0
+margin_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = ExtResource( 1 )
+text = "βετα v0.0.0"
+align = 2
+valign = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SplashScreen" parent="." instance=ExtResource( 6 )]
+visible = false
+[connection signal="finished" from="Background" to="." method="_on_Background_finished"]
