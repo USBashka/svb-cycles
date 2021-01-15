@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://res/fonts/title_small.tres" type="DynamicFont" id=1]
 [ext_resource path="res://assets/ui/settings/window_mode.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/settings/language.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 8.0
@@ -22,6 +23,26 @@ region = Rect2( 0, 8, 8, 8 )
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 16, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 16, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 24, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 48, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 56, 8, 8 )
 
 [node name="Settings" type="Control"]
 anchor_right = 1.0
@@ -50,10 +71,10 @@ __meta__ = {
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
 margin_right = 379.0
-margin_bottom = 40.0
+margin_bottom = 62.0
 columns = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/GridContainer"]
+[node name="Volume" type="Label" parent="VBoxContainer/GridContainer"]
 margin_top = 4.0
 margin_right = 187.0
 margin_bottom = 12.0
@@ -66,9 +87,10 @@ margin_left = 191.0
 margin_right = 378.0
 margin_bottom = 16.0
 size_flags_horizontal = 3
+size_flags_vertical = 1
 value = 100.0
 
-[node name="Label2" type="Label" parent="VBoxContainer/GridContainer"]
+[node name="ViewMode" type="Label" parent="VBoxContainer/GridContainer"]
 margin_top = 19.0
 margin_right = 187.0
 margin_bottom = 39.33
@@ -85,4 +107,20 @@ custom_styles/normal = SubResource( 1 )
 text = "Оконный"
 icon = SubResource( 2 )
 items = [ "Оконный", SubResource( 2 ), false, 0, null, "Полноэкранный", SubResource( 3 ), false, 1, null, "Псевдополноэкранный", SubResource( 4 ), true, 2, null ]
+selected = 0
+
+[node name="Language" type="Label" parent="VBoxContainer/GridContainer"]
+margin_top = 49.0
+margin_right = 187.0
+margin_bottom = 57.0
+text = "Язык"
+
+[node name="OptionButton2" type="OptionButton" parent="VBoxContainer/GridContainer"]
+margin_left = 191.0
+margin_top = 44.0
+margin_right = 378.0
+margin_bottom = 62.0
+text = "Русский"
+icon = SubResource( 6 )
+items = [ "Русский", SubResource( 6 ), false, 0, null, "English", SubResource( 7 ), true, 1, null, "Українська", SubResource( 8 ), true, 2, null, "Esperanto", SubResource( 9 ), true, 3, null, "Gay", SubResource( 10 ), true, 4, null ]
 selected = 0
