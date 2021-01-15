@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "MButton",
 "language": "GDScript",
 "path": "res://ui/elements/menu_button.gd"
+}, {
+"base": "Resource",
+"class": "StringsSet",
+"language": "GDScript",
+"path": "res://custom_res_scripts/StringsSet.gd"
 } ]
 _global_script_class_icons={
-"MButton": ""
+"MButton": "res://assets/editor_icons/MButton.png",
+"StringsSet": "res://assets/editor_icons/StringsSet.png"
 }
 
 [application]
@@ -92,6 +98,6 @@ translations=PoolStringArray(  )
 quality/2d/use_nvidia_rect_flicker_workaround=true
 quality/2d/use_pixel_snap=true
 batching/precision/uv_contract=true
-environment/default_clear_color=Color( 0.780392, 0.882353, 0.87451, 1 )
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 quality/filters/msaa=1
 environment/default_environment="res://default_env.tres"

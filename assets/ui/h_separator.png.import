@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wolf_bg.jpg-c2857c4423296e3cb137c7155bd271fe.stex"
+path="res://.import/h_separator.png-2d76e8f2f0183b8e4f6c97481bd6d1db.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/wolf_bg.jpg"
-dest_files=[ "res://.import/wolf_bg.jpg-c2857c4423296e3cb137c7155bd271fe.stex" ]
+source_file="res://assets/ui/h_separator.png"
+dest_files=[ "res://.import/h_separator.png-2d76e8f2f0183b8e4f6c97481bd6d1db.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

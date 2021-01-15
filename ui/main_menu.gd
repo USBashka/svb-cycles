@@ -5,6 +5,7 @@ export(int, -1, 7) var current_button: int = -1
 
 onready var buttons = $Buttons
 
+
 func _ready():
 	if G.is_mobile() or G.is_web():
 		# В мобильных и веб версиях не нужна кнопка выхода

@@ -16,6 +16,9 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+icon_texture = null
+label_text = ""
+action = ""
 
 [node name="HBox" type="HBoxContainer" parent="."]
 margin_right = 137.0
