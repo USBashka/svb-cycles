@@ -1,32 +1,9 @@
 extends Control
 
+
 export onready var tip_label = $VBoxContainer/TipLabel
+export(Resource) var tips = preload("res://res/strings/ru/tips.tres")
 
-var tips = """Ходите, чтобы перемещаться
-Бейте врагов, чтобы наносить им урон
-Поднимайте предметы и они появятся в инвентаре
-Покупки уменьшают количество денег
-Проходите игру, чтобы пройти её
-Удары противников уменьшают ваши ОЗ
-Санёк в биде
-Санёк. Санёк
-Вставляйте кэмни
-Tiba ishut, chtobi naíti
-Находите оружие, чтобы получить его
-Купите игру, чтобы играть в неё
-Загрузитесь, чтобы не начинать всё сначала
-Посмотрите сириал, чтобы ь
-Оружие с более высоким уроном наносит больше урона
-Продавцы продают предметы
-Книги можно читать
-Шаманы занимаются шаманизмом
-Чем больше уровень, тем лучше
-Не тот прошёл игру, кто прошёл её, а тот, кто нашёл все концовки"""
-
-var tips_list = tips.split('\n')
-
-func update_tip():
-	tip_label.text = tips_list[randi() % tips_list.size()]
 
 func _ready():
 	randomize()
@@ -35,3 +12,6 @@ func _ready():
 func _input(event):
 	if event.is_pressed():
 		update_tip()
+
+func update_tip():
+	tip_label.text = "Савет:\n" + tips.rand_string()

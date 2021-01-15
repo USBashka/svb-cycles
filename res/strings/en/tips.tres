@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://custom_res_scripts/StringsSet.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+description = "Teeps for loading screen"
+strings = PoolStringArray( "Walk to move", "Hit enemies to damage them!", "Grab items and they show up in the inventory", "Purchases decrease your money", "Play game to complete it", "Enemies\' attacks decrease your HP", "Sanëk in messfotune", "Sanëk. Sanëk", "Insert stouns", "Зэй сёарч ю, ту файнд" )
